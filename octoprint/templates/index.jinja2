@@ -237,6 +237,7 @@
                     <ul class="nav nav-tabs" id="tabs">
                         <li class="active"><a href="#temp" data-toggle="tab">Temperature</a></li>
                         <li><a href="#control" data-toggle="tab">Control</a></li>
+                        {% if enableShapeEditor %}<li><a href="#creator" data-toggle="tab">Create</a></li>{% endif %}
                         {% if enableGCodeVisualizer %}<li><a href="#gcode" data-toggle="tab">GCode Viewer</a></li>{% endif %}
                         <li><a href="#term" data-toggle="tab">Terminal</a></li>
                         {% if enableTimelapse %}<li><a href="#timelapse" data-toggle="tab">Timelapse</a></li>{% endif %}
@@ -500,6 +501,11 @@
                             </div>
 
                         </div>
+                        
+                        <div class="tab-pane" id="creator">
+                        	<iframe src="static/coffeescad/index.html" width="100%" height="500px" frameborder="0"></iframe>
+                        	
+					    </div>             
                         <div class="tab-pane" id="term">
                             <pre id="terminal-output" class="pre-scrollable"></pre>
                             <label class="checkbox">
@@ -619,6 +625,10 @@
         <script type="text/javascript" src="{{ url_for('static', filename='gcodeviewer/js/ui.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='gcodeviewer/js/gCodeReader.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='gcodeviewer/js/renderer.js') }}"></script>
-
+        
+        <script data-main="static/coffeescad/app/config" src="static/coffeescad/assets/js/libs/require.min.js"></script>
+        
+        <!--<script type="text/javascript" src="{{ url_for('static', filename='coffeescad/app/ui.js') }}"></script>
+		-->
     </body>
 </html>

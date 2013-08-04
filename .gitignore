@@ -7,6 +7,9 @@
 *.iml
 .idea
 .DS_Store
+.project
+.pydevproject
+.settings
 build
 dist
 OctoPrint.egg-info

@@ -49,6 +49,7 @@ default_settings = {
 	},
 	"feature": {
 		"gCodeVisualizer": True,
+		"shapeEditor": True,
 		"waitForStartOnConnect": False,
 		"alwaysSendChecksum": False,
 		"sdSupport": True
